@@ -25,7 +25,7 @@ jobs:
            cmake -S . -B ./build -DCMAKE_BUILD_TYPE=Release
            cmake --build ./build
            sudo cmake --build ./build --target=install -j4
-      - name: Build major project
+      - name: Build major project helloworld
         run: |
           cmake . -DPROJECT_VERSION_PATCH=${{ github.run_number }} -DWITH_GTEST_TEST=ON
           cmake --build .
